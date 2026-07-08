@@ -1,11 +1,19 @@
 #pragma once
 
 enum Mode {
-    MODE_START,
+    MODE_IDLE,
     MODE_PREVIEW,
     MODE_MENU,
+
     MODE_CEILING,
-    MODE_MONITOR
+    MODE_CEILING_BRIGHTNESS,
+    MODE_CEILING_RED,
+    MODE_CEILING_GREEN,
+    MODE_CEILING_BLUE,
+
+    MODE_MONITOR,
+    MODE_MONITOR_BRIGHTNESS,
+    MODE_MONITOR_COLOR
 };
 
 enum MonitorState {
@@ -20,26 +28,15 @@ struct RGB {
     int b;
 };
 
-enum RGBChannel {
-    CHANNEL_RED,
-    CHANNEL_GREEN,
-    CHANNEL_BLUE
-};
-
-enum CeilingMenuItem {
-    CEILING_BRIGHTNESS,
-    CEILING_COLOR
-}
-
 extern Mode mode;
 
 extern int ceiling_brightness;
 extern RGB ceiling_color;
-extern RGBChannel rgb_channel;
-extern CeilingMenuItem ceiling_menu_item;
 
 extern MonitorState monitor_state;
 extern int monitor_brightness;
 
 extern int screen_page;
 extern int selected_menu_item; 
+
+extern unsigned long last_activity;
