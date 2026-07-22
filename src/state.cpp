@@ -7,6 +7,7 @@ Mode mode = MODE_PREVIEW;
 // =====ПОТОЛОЧНАЯ ПОДСВЕТКА(ЯРКОСТЬ/RGB)=====
 int ceiling_brightness = 50;
 RGB ceiling_color = {0, 0, 0};
+bool ceiling_enabled = false;
 
 // =====МОНИТОРНАЯ ПОДСВЕТКА=====
 MonitorState monitor_state = MONITOR_OFF;
